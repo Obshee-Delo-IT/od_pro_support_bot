@@ -41,7 +41,7 @@ env/bin/python bot.py
 ```
 
 </li>
-<li> <strong>Create virtual env Windows</strong>
+<li> <strong>Startup Windows</strong>
 
 ```bash
 env/Scripts/python bot.py
