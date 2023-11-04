@@ -38,22 +38,13 @@ pip install -r req.txt
 
 # Start
 
-<li> <strong>Startup Linux</strong>
+<strong>Startup</strong>
 
 ```bash
-env/bin/python bot.py
+python3 bot.py
 ```
 
-</li>
-<li> <strong>Startup Windows</strong>
 
-```bash
-env/Scripts/python bot.py
-```
-
-</li>
-
-# Additional information
 <strong>Linux startup with resistant to terminal closure (like ssh disconnect)</strong>  
 through nohup (resistent to input/output closure as well):
 ```bash
