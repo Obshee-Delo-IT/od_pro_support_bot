@@ -49,7 +49,10 @@ python3 bot.py
 through nohup (resistent to input/output closure as well):
 ```bash
 cd py
+wget https://raw.githubusercontent.com/Obshee-Delo-IT/od_pro_support_bot/main/bot.py
+
 source venv/bin/activate
+pip install pyTelegramBotAPI==4.7.1
 nohup python3 bot.py > od-pro-bot.out 2>&1 &
 ```
 
