@@ -1,20 +1,24 @@
 # NexaevTG_bot
 
-# Install 
-
+# Install
 <ul>
 <li> <strong>Copy from git</strong>
 
 ```bash
-git clone https://github.com/Jexelus/NexaevTG_bot
+cd py
+git clone https://github.com/obshee-delo-ru/od_pro_support_bot.git
 ```
+
+</li>
+
+<li> <strong>Create virtual env on hosting: <a href="https://timeweb.com/ru/docs/virtualnyj-hosting/prilozheniya-i-frejmvorki/python-ustanovka-virtualenv/">timeweb</a></strong>
 
 </li>
 
 <li> <strong>Create virtual env Linux</strong>
 
 ```bash
-cd NexaevTG_bot
+cd py
 python3 -m venv env
 pip install -r req.txt
 ```
@@ -23,7 +27,7 @@ pip install -r req.txt
 <li> <strong>Create virtual env Windows</strong>
 
 ```bash
-cd NexaevTG_bot
+cd py
 python -m venv env
 pip install -r req.txt
 ```
@@ -50,30 +54,17 @@ env/Scripts/python bot.py
 </li>
 
 # Additional information
-<strong>Linux startup with resistant to terminal closure (like ssh disconnect)</strong>
+<strong>Linux startup with resistant to terminal closure (like ssh disconnect)</strong>  
+through nohup (resistent to input/output closure as well):
+```bash
+cd py
+source venv/bin/activate
+nohup python3 bot.py > od-pro-bot.out 2>&1 &
+```
 
+through disown:
 ```bash
 env/Scripts/python bot.py &
 disown %1 #(jobs -l to check a worker not in session)
 #ps aux to check worker
-```
-<strong>Linux demon script</strong>
-```bat
-[Unit]
-Description=TGN_bot
-After=network.target
-[Service]
-Type=simple
-WorkingDirectory=<Path to rep>
-ExecStart=<Path to env/bin/python> <Path to bot.py>
-Restart=on-failure
-RestartSec=5s
-[Install]
-WantedBy=multi-user.target
-```
-<strong>Start demon command</strong>
-```bash
-sudo systemd reload
-sudo systemd start <name demon>
-#check status sudo systemd status <name demon>
 ```
