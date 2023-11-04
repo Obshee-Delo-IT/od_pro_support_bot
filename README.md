@@ -1,4 +1,4 @@
-# NexaevTG_bot
+# Obshee-Delo PRO support bot
 
 # Install
 <ul>
