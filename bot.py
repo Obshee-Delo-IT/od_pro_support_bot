@@ -1,7 +1,7 @@
 import telebot
 from telebot.types import BotCommand, WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN = '6965022981:AAGcVAl710qRE721TifrTwdW1KaJFkZ76ms'
+TOKEN = '****' # create token through https://t.me/BotFather
 
 bot = telebot.TeleBot(  TOKEN)
 
