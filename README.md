@@ -52,13 +52,13 @@ cd py
 wget https://raw.githubusercontent.com/Obshee-Delo-IT/od_pro_support_bot/main/bot.py
 
 source venv/bin/activate
-pip install pyTelegramBotAPI==4.7.1
+pip install pyTelegramBotAPI==4.14.0
 nohup python3 bot.py > od-pro-bot.out 2>&1 &
 ```
 
 through disown:
 ```bash
-env/Scripts/python bot.py &
-disown %1 #(jobs -l to check a worker not in session)
+env/Scripts/python bot.py & disown %1
+#(jobs -l to check a worker not in session)
 #ps aux to check worker
 ```
